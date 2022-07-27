@@ -1,0 +1,16 @@
+---
+title: "About"
+about:
+  template: jolla
+  links:
+    - icon: twitter
+      text: Twitter
+      href: https://twitter.com
+    - icon: github
+      text: Github
+      href: https://github.com
+---
+
+This blog contains technical documentation for various process that PATH and our collaborators may find useful for reproducing and extending analyses.
+
+If you are interested in contributing, please provide a pull request via Github. Please make sure the sensitive data is removed or properly anonymized.

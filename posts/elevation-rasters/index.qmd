@@ -1,0 +1,98 @@
+---
+title: "Downloading elevation data in R"
+author: "Justin Millar"
+date: "7/13/2022"
+categories: [remote sensing, R, raster]
+image: "image.jpg"
+toc: true
+format:
+  html:
+    code-fold: false
+    code-tools: true
+execute:
+  warning: false
+  message: false
+---
+
+## Installing the `whatarelief` package
+
+We will be using a relatively new R package called [`whatarelief`](https://github.com/mdsumner/whatarelief). This package is hosted on Github, but is not currently on CRAN so we have to use the `devtools` package to install (you may need to install this package first).
+
+```{r}
+#| eval: false
+#| include: false
+#| label: install-whatarelief
+
+devtools::install_github("mdsumner/whatarelief")
+```
+
+The primary function in this package is called `elevation()`, which downloads a elevation raster directly into our R session. This raster can be automatically formatted for specific locations using a reference extent, shapefile, or other raster file.
+
+The [package documentation](https://mdsumner.github.io/whatarelief/) provide all the information you'll need to get started, including how to [select difference elevation sources](https://mdsumner.github.io/whatarelief/articles/elevation-sources.html). It's worth looking through the documentation, as there are some quarks.
+
+```{r}
+#| message: false
+#| warning: false
+library(whatarelief)
+image(im <- elevation())
+image(t(im[nrow(im):1, ]))
+```
+
+The next section will demonstrate a brief example for getting elevation data from Zambia
+
+## Example: Elevation raster for Zambia
+
+To get started, let's load some useful packages for working with rasters and shapefiles, then we will download a shapefile for Zambia.
+
+```{r}
+
+library(raster)   # Raster package
+library(sf)       # Shapefile package
+library(PATHtoolsZambia)  # PATH data for Zambia
+
+# Load reference shapefile
+shp <- retrieve("province-shp")
+
+# Load reference raster
+rst <- retrieve("grid3-pop-rescaled")
+
+# Visualize
+plot(rst, col = viridis::plasma(100))
+plot(st_geometry(shp), add = T)
+```
+
+To use a reference raster to select an area for interest, all we need to do is include the raster object in the `elevation()` functions.
+
+```{r}
+zm_elv1 <- elevation(rst)
+plot(zm_elv1)
+plot(st_geometry(shp), add = T)
+```
+
+Conveniently, this elevation raster is at the same resolution and alignment as our reference.
+
+```{r}
+compareRaster(rst, zm_elv1)
+stack(rst, zm_elv1)
+```
+
+To test this functionality, let's aggregate our reference raster and get a new elevation raster.
+
+```{r}
+# Aggregate by a factor of 5
+rst_agg <- aggregate(rst, 5, fun = "sum")
+plot(rst_agg, col = viridis::plasma(100))
+plot(st_geometry(shp), add = T)
+
+# Pull aggregated version of elevation 
+zm_elv2 <- elevation(rst_agg)
+plot(zm_elv2)
+plot(st_geometry(shp), add = T)
+
+# Compare
+compareRaster(rst_agg, zm_elv2)
+stack(rst_agg, zm_elv2)
+try(compareRaster(zm_elv1, zm_elv2))
+```
+
+It is also possible to download rasters using just the extent as a numeric vector, which means it is also possible to use a shapefile. However, you will also have to provide the projection and potential other spatial information, which may be more difficult than just using a reference raster.

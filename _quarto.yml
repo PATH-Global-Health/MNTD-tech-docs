@@ -1,0 +1,20 @@
+project:
+  type: website
+
+website:
+  title: "PATH Malaria & NTDs Technical Docs"
+  navbar:
+    right:
+      - about.qmd
+      - icon: github
+        href: https://github.com/
+      - icon: twitter
+        href: https://twitter.com
+format:
+  html:
+    theme: journal
+    css: styles.scss
+
+execute:
+  freeze: auto
+
