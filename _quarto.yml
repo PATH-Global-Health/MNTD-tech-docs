@@ -10,6 +10,10 @@ website:
         href: https://github.com/PATH-Global-Health/MNTD-tech-docs
       - icon: twitter
         href: https://twitter.com/PATHMalaria
+  comments: 
+    utterances:
+      repo: PATH-Global-Health/MNTD-tech-docs
+      
 format:
   html:
     theme: journal
@@ -17,4 +21,4 @@ format:
 
 execute:
   freeze: auto
-
+      
