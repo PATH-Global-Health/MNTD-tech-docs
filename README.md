@@ -14,7 +14,7 @@ The blog is created and maintained using [Quarto](https://quarto.org/), a open-s
 
 ## Suggesting topics
 
-If you have an idea for a topic, please [open an issue in the Github repository](https://github.com/PATH-Global-Health/MNTD-tech-docs/issues?q=is%3Aissue+is%3Aopen+sort%3Aupdated-desc) and use the #post-idea tag. In the issue you can provide as much details and examples as you wish, and tag contributors you think might be able to build on your concept.
+If you have an idea for a topic, please [open an issue in the Github repository](https://github.com/PATH-Global-Health/MNTD-tech-docs/issues?q=is%3Aissue+is%3Aopen+sort%3Aupdated-desc). In the issue you can provide as much details and examples as you wish, and tag contributors you think might be able to build on your concept.
 
 ## Contributing to the blog
 
