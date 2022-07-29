@@ -4,7 +4,7 @@
 
 <!-- badges: end -->
 
-The goal of PATH Malaria & NTDs Technical Docs is to develop and maintain documentation of our analytical workflows both internally and externally. These documents will be shared on a in **public** blog at [https://path-global-health.github.io/MNTD-tech-docs/](https://path-global-health.github.io/MNTD-tech-docs/https://path-global-health.github.io/MNTD-tech-docs/).
+The goal of PATH Malaria & NTDs Technical Docs is to develop and maintain documentation of our analytical workflows both internally and externally. These documents will be shared on a in **public** blog at [https://path-global-health.github.io/MNTD-tech-docs/](https://path-global-health.github.io/MNTD-tech-docs/).
 
 Use case examples will try to rely on data is publicly accessible and well-maintained to ensure that they are relevant and reproducible. If internal data must be use, we will strive to provide either anonymized or simulated data *within the post*, or provide clear directions and code for generating data and reproducing the demonstration.
 
