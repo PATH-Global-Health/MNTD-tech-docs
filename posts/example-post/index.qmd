@@ -1,0 +1,14 @@
+---
+title: "Example post"
+author: "Justin Millar"
+date: "10/03/2022"
+categories: [remote sensing, R, raster]
+toc: true
+format:
+  html:
+    code-fold: false
+    code-tools: true
+execute:
+  warning: false
+  message: false
+---
