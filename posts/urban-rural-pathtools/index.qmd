@@ -47,7 +47,7 @@ We will use Senegal as an example - the download links for other countries with 
 #  Zambia: https://wopr.worldpop.org/download/25
 ```
 
-First we load some useful packages for working with rasters and shapefiles, then we will download the populaiton raster file for Senegal. The GRID3 population raster is at a resolution of 100m so we need to use the `aggregate()` function from the `terra` package to combine grid cells to a spatial resolution of 1km grid cells for input into the `define_urban()` function.
+First we load some useful packages for working with rasters and shapefiles, then we will download the population raster file for Senegal. The GRID3 population raster is at a resolution of 100 m so we need to use the `aggregate()` function from the `terra` package to combine grid cells to a spatial resolution of 1km grid cells for input into the `define_urban()` function.
 
 ```{r, fig.height=5, fig.width=11}
 #| message: false
@@ -100,7 +100,7 @@ ggplot() +
 
 The resulting plot displays the populated areas of Senegal with those areas in yellow representing the most densely populated areas with the panel highlighting Dakar - the capital city of Senegal.
 
-In this example I created a temporary folder (using the `tempdir()`) and saved it's "path" into an object called `dest`. This is where we will download rasters. You can swap `tempdir()` with a file path to a location on your computer. Or directly read in a raster if it is already avaliable on your computer.
+In this example I created a temporary folder (using the `tempdir()`) and saved it's "path" into an object called `dest`. This is where we will download rasters. You can swap `tempdir()` with a file path to a location on your computer. Or directly read in a raster if it is already available on your computer.
 
 ## Classification of urban and rural areas
 
@@ -108,7 +108,7 @@ In this example I created a temporary folder (using the `tempdir()`) and saved i
 ![**Contigious grid cells.** The grid displays a central coloured cell surrounded by 8 other cells numbered 1 through 8. **four-point contiguity** would select grid cells 2,4,6 and 8 as contigious to the central cell. **eight-point contiguity** would select all grid cells 1 through 8 as contigious, as this definition also allows grid cells that are linked on the diagonal.](contig.jpg)
 :::
 
-The next step in this work is to use the `define_urban()` function from the `PATHtools` pacakge to define urban areas. This is done using 1km² grid cells, classified according to their **population density**, **population size** and **contiguity** (neighbouring cells).
+The next step in this work is to use the `define_urban()` function from the `PATHtools` package to define urban areas. This is done using 1km² grid cells, classified according to their **population density**, **population size** and **contiguity** (neighbouring cells).
 
 This function requires 3 inputs:
 
@@ -118,7 +118,7 @@ This function requires 3 inputs:
 
 3.  **min_urbsize**: indicates the minimum population in the total area of contiguous selected pixels to be considered as urban
 
-The identification of urban areas then occurs in two steps, first all cells with a population density of over `runurb_cutoff` are selected and then groups of contigious cells are identified using eight-point contiguity, in other words, including diagonals (see margin figure). Contigious cells are grouped together and each group with a collective population size of over `min_urbsize` are defined as urban.
+The identification of urban areas then occurs in two steps, first all cells with a population density of over `runurb_cutoff` are selected and then groups of contiguous cells are identified using eight-point contiguity, in other words, including diagonals (see margin figure). Contiguous cells are grouped together and each group with a collective population size of over `min_urbsize` are defined as urban.
 
 For this example we use a population density threshold of 300 people per square km (`rururb_cutoff`) and a minimum population size (`min_urbsize`) of 10,000 people.
 
@@ -183,10 +183,9 @@ For performing this analysis for another country users can use the threshold val
 
 2.  **Urban cluster** (moderate-density cluster) --- a cluster of contiguous grid cells of 1 km² (using eight-point contiguity, in other words, including diagonals) with a population density of at least 300 inhabitants per km² and a minimum population of 5,000 inhabitants.
 
-
 ## Calculating the urban proportion of the population in a spatial area defined by an input shape file
 
-To calcualte the proportion of the population in a spatial region that live in urban or rural areas we first need a shape file with defined boundaries e.g. administrative units or health facility catchment areas.
+To calculate the proportion of the population in a spatial region that live in urban or rural areas we first need a shape file with defined boundaries e.g. administrative units or health facility catchment areas.
 
 For this example we will use a shapefile of the 14 regions of Senegal.
 
@@ -237,9 +236,9 @@ ggplot(shp_pop) +
 
 ## Classifying point locations based on urban rural pixel classifications
 
-If geo-location or point data is avaliable, for example the co-ordinates of health facilities, hospitals, schools, pharmacies etc, then we can use the `ur_categories` raster output to classify these services and the communities they serve.
+If geo-location or point data is available, for example the co-ordinates of health facilities, hospitals, schools, pharmacies etc, then we can use the `ur_categories` raster output to classify these services and the communities they serve.
 
-Here I create some example coordinates but users should upload their own coordinates of interest here. In this example we include a 2.5km buffer region around each point to account for potential heterogeneity that might be missed from taking just the point-level extraction.
+Here I create some example coordinates but users should upload their own coordinates of interest here. In this example we include a 2.5 km buffer region around each point to account for potential heterogeneity that might be missed from taking just the point-level extraction.
 
 ```{r}
 # example coordinates 
