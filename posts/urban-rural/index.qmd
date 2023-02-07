@@ -255,7 +255,7 @@ calculate_mode <- function(x) {
 
 Now we can run the extraction and examine the resulting classification.  
 
-```{r, dpi=600}
+```{r}
 # extraction
 points_classification <- 
   terra::extract(ur_class, points_w_buffer) %>%
@@ -271,8 +271,8 @@ points_classification_sf <- bind_cols(points, points_classification)
 # plot 
 ggplot() +
   geom_spatraster(data = ur_class) +
-  geom_sf(data = points_classification_sf, mapping=aes(col=classification), shape = 19,
-          fill=NA, size=1)+
+  geom_sf(data = points_classification_sf, mapping=aes(fill=classification), shape = 21,
+          fill=NA, size=1.5)+
   theme_grey(12) +
   labs(title = "", fill=" ", col=" ") +
   scale_color_manual(values=c("#b01f35", "#e4efe9"),
