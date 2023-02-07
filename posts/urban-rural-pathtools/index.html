@@ -318,7 +318,7 @@ gtag('config', 'G-6DDVRC28MC', { 'anonymize_ip': true});
 <div class="no-row-height column-margin column-container"><div class="">
 <div class="quarto-figure quarto-figure-center">
 <figure class="figure">
-<p><a href="contig.jpg" class="lightbox" data-gallery="quarto-lightbox-gallery-2" title="Contigious grid cells. The grid displays a central coloured cell surrounded by 8 other cells numbered 1 through 8. four-point contiguity would select grid cells 2,4,6 and 8 as contigious to the central cell. eight-point contiguity would select all grid cells 1 through 8 as contigious, as this definition also allows grid cells that are linked on the diagonal."><img src="contig.jpg" title="fig:" class="img-fluid figure-img"></a></p>
+<p><a href="contig.jpg" class="lightbox" title="Contigious grid cells. The grid displays a central coloured cell surrounded by 8 other cells numbered 1 through 8. four-point contiguity would select grid cells 2,4,6 and 8 as contigious to the central cell. eight-point contiguity would select all grid cells 1 through 8 as contigious, as this definition also allows grid cells that are linked on the diagonal." data-gallery="quarto-lightbox-gallery-2"><img src="contig.jpg" title="fig:" class="img-fluid figure-img"></a></p>
 <p></p><figcaption class="figure-caption"><strong>Contigious grid cells.</strong> The grid displays a central coloured cell surrounded by 8 other cells numbered 1 through 8. <strong>four-point contiguity</strong> would select grid cells 2,4,6 and 8 as contigious to the central cell. <strong>eight-point contiguity</strong> would select all grid cells 1 through 8 as contigious, as this definition also allows grid cells that are linked on the diagonal.</figcaption><p></p>
 </figure>
 </div>
@@ -348,7 +348,7 @@ gtag('config', 'G-6DDVRC28MC', { 'anonymize_ip': true});
 <div class="quarto-layout-row quarto-layout-valign-top">
 <div class="quarto-figure quarto-figure-center" style="flex-basis: 50.0%;justify-content: center;">
 <figure class="figure">
-<p><a href="index_files/figure-html/unnamed-chunk-5-1.png" class="lightbox" data-gallery="quarto-lightbox-gallery-3" width="672" title="define_urban() function outputs"><img src="index_files/figure-html/unnamed-chunk-5-1.png" title="fig:" class="img-fluid figure-img"></a></p>
+<p><a href="index_files/figure-html/unnamed-chunk-5-1.png" class="lightbox" title="define_urban() function outputs" width="672" data-gallery="quarto-lightbox-gallery-3"><img src="index_files/figure-html/unnamed-chunk-5-1.png" title="fig:" class="img-fluid figure-img"></a></p>
 <p></p><figcaption class="figure-caption">define_urban() function outputs</figcaption><p></p>
 </figure>
 </div>
@@ -737,7 +737,7 @@ window.document.addEventListener("DOMContentLoaded", function (event) {
 <span id="cb9-51"><a href="#cb9-51" aria-hidden="true" tabindex="-1"></a><span class="co">#  Zambia: https://wopr.worldpop.org/download/25</span></span>
 <span id="cb9-52"><a href="#cb9-52" aria-hidden="true" tabindex="-1"></a><span class="in">```</span></span>
 <span id="cb9-53"><a href="#cb9-53" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb9-54"><a href="#cb9-54" aria-hidden="true" tabindex="-1"></a>First we load some useful packages for working with rasters and shapefiles, then we will download the populaiton raster file for Senegal. The GRID3 population raster is at a resolution of 100m so we need to use the <span class="in">`aggregate()`</span> function from the <span class="in">`terra`</span> package to combine grid cells to a spatial resolution of 1km grid cells for input into the <span class="in">`define_urban()`</span> function.</span>
+<span id="cb9-54"><a href="#cb9-54" aria-hidden="true" tabindex="-1"></a>First we load some useful packages for working with rasters and shapefiles, then we will download the population raster file for Senegal. The GRID3 population raster is at a resolution of 100 m so we need to use the <span class="in">`aggregate()`</span> function from the <span class="in">`terra`</span> package to combine grid cells to a spatial resolution of 1km grid cells for input into the <span class="in">`define_urban()`</span> function.</span>
 <span id="cb9-55"><a href="#cb9-55" aria-hidden="true" tabindex="-1"></a></span>
 <span id="cb9-56"><a href="#cb9-56" aria-hidden="true" tabindex="-1"></a><span class="in">```{r, fig.height=5, fig.width=11}</span></span>
 <span id="cb9-57"><a href="#cb9-57" aria-hidden="true" tabindex="-1"></a><span class="co">#| message: false</span></span>
@@ -790,7 +790,7 @@ window.document.addEventListener("DOMContentLoaded", function (event) {
 <span id="cb9-104"><a href="#cb9-104" aria-hidden="true" tabindex="-1"></a></span>
 <span id="cb9-105"><a href="#cb9-105" aria-hidden="true" tabindex="-1"></a>The resulting plot displays the populated areas of Senegal with those areas in yellow representing the most densely populated areas with the panel highlighting Dakar - the capital city of Senegal.</span>
 <span id="cb9-106"><a href="#cb9-106" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb9-107"><a href="#cb9-107" aria-hidden="true" tabindex="-1"></a>In this example I created a temporary folder (using the <span class="in">`tempdir()`</span>) and saved it's "path" into an object called <span class="in">`dest`</span>. This is where we will download rasters. You can swap <span class="in">`tempdir()`</span> with a file path to a location on your computer. Or directly read in a raster if it is already avaliable on your computer.</span>
+<span id="cb9-107"><a href="#cb9-107" aria-hidden="true" tabindex="-1"></a>In this example I created a temporary folder (using the <span class="in">`tempdir()`</span>) and saved it's "path" into an object called <span class="in">`dest`</span>. This is where we will download rasters. You can swap <span class="in">`tempdir()`</span> with a file path to a location on your computer. Or directly read in a raster if it is already available on your computer.</span>
 <span id="cb9-108"><a href="#cb9-108" aria-hidden="true" tabindex="-1"></a></span>
 <span id="cb9-109"><a href="#cb9-109" aria-hidden="true" tabindex="-1"></a><span class="fu">## Classification of urban and rural areas</span></span>
 <span id="cb9-110"><a href="#cb9-110" aria-hidden="true" tabindex="-1"></a></span>
@@ -798,7 +798,7 @@ window.document.addEventListener("DOMContentLoaded", function (event) {
 <span id="cb9-112"><a href="#cb9-112" aria-hidden="true" tabindex="-1"></a><span class="al">![**Contigious grid cells.** The grid displays a central coloured cell surrounded by 8 other cells numbered 1 through 8. **four-point contiguity** would select grid cells 2,4,6 and 8 as contigious to the central cell. **eight-point contiguity** would select all grid cells 1 through 8 as contigious, as this definition also allows grid cells that are linked on the diagonal.](contig.jpg)</span></span>
 <span id="cb9-113"><a href="#cb9-113" aria-hidden="true" tabindex="-1"></a>:::</span>
 <span id="cb9-114"><a href="#cb9-114" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb9-115"><a href="#cb9-115" aria-hidden="true" tabindex="-1"></a>The next step in this work is to use the <span class="in">`define_urban()`</span> function from the <span class="in">`PATHtools`</span> pacakge to define urban areas. This is done using 1km² grid cells, classified according to their **population density**, **population size** and **contiguity** (neighbouring cells).</span>
+<span id="cb9-115"><a href="#cb9-115" aria-hidden="true" tabindex="-1"></a>The next step in this work is to use the <span class="in">`define_urban()`</span> function from the <span class="in">`PATHtools`</span> package to define urban areas. This is done using 1km² grid cells, classified according to their **population density**, **population size** and **contiguity** (neighbouring cells).</span>
 <span id="cb9-116"><a href="#cb9-116" aria-hidden="true" tabindex="-1"></a></span>
 <span id="cb9-117"><a href="#cb9-117" aria-hidden="true" tabindex="-1"></a>This function requires 3 inputs:</span>
 <span id="cb9-118"><a href="#cb9-118" aria-hidden="true" tabindex="-1"></a></span>
@@ -808,7 +808,7 @@ window.document.addEventListener("DOMContentLoaded", function (event) {
 <span id="cb9-122"><a href="#cb9-122" aria-hidden="true" tabindex="-1"></a></span>
 <span id="cb9-123"><a href="#cb9-123" aria-hidden="true" tabindex="-1"></a><span class="ss">3.  </span>**min_urbsize**: indicates the minimum population in the total area of contiguous selected pixels to be considered as urban</span>
 <span id="cb9-124"><a href="#cb9-124" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb9-125"><a href="#cb9-125" aria-hidden="true" tabindex="-1"></a>The identification of urban areas then occurs in two steps, first all cells with a population density of over <span class="in">`runurb_cutoff`</span> are selected and then groups of contigious cells are identified using eight-point contiguity, in other words, including diagonals (see margin figure). Contigious cells are grouped together and each group with a collective population size of over <span class="in">`min_urbsize`</span> are defined as urban.</span>
+<span id="cb9-125"><a href="#cb9-125" aria-hidden="true" tabindex="-1"></a>The identification of urban areas then occurs in two steps, first all cells with a population density of over <span class="in">`runurb_cutoff`</span> are selected and then groups of contiguous cells are identified using eight-point contiguity, in other words, including diagonals (see margin figure). Contiguous cells are grouped together and each group with a collective population size of over <span class="in">`min_urbsize`</span> are defined as urban.</span>
 <span id="cb9-126"><a href="#cb9-126" aria-hidden="true" tabindex="-1"></a></span>
 <span id="cb9-127"><a href="#cb9-127" aria-hidden="true" tabindex="-1"></a>For this example we use a population density threshold of 300 people per square km (<span class="in">`rururb_cutoff`</span>) and a minimum population size (<span class="in">`min_urbsize`</span>) of 10,000 people.</span>
 <span id="cb9-128"><a href="#cb9-128" aria-hidden="true" tabindex="-1"></a></span>
@@ -873,130 +873,129 @@ window.document.addEventListener("DOMContentLoaded", function (event) {
 <span id="cb9-191"><a href="#cb9-191" aria-hidden="true" tabindex="-1"></a></span>
 <span id="cb9-192"><a href="#cb9-192" aria-hidden="true" tabindex="-1"></a><span class="ss">2.  </span>**Urban cluster** (moderate-density cluster) --- a cluster of contiguous grid cells of 1 km² (using eight-point contiguity, in other words, including diagonals) with a population density of at least 300 inhabitants per km² and a minimum population of 5,000 inhabitants.</span>
 <span id="cb9-193"><a href="#cb9-193" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb9-194"><a href="#cb9-194" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb9-195"><a href="#cb9-195" aria-hidden="true" tabindex="-1"></a><span class="fu">## Calculating the urban proportion of the population in a spatial area defined by an input shape file</span></span>
-<span id="cb9-196"><a href="#cb9-196" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb9-197"><a href="#cb9-197" aria-hidden="true" tabindex="-1"></a>To calcualte the proportion of the population in a spatial region that live in urban or rural areas we first need a shape file with defined boundaries e.g. administrative units or health facility catchment areas.</span>
-<span id="cb9-198"><a href="#cb9-198" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb9-199"><a href="#cb9-199" aria-hidden="true" tabindex="-1"></a>For this example we will use a shapefile of the 14 regions of Senegal.</span>
-<span id="cb9-200"><a href="#cb9-200" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb9-201"><a href="#cb9-201" aria-hidden="true" tabindex="-1"></a><span class="in">```{r, dpi=600}</span></span>
-<span id="cb9-202"><a href="#cb9-202" aria-hidden="true" tabindex="-1"></a><span class="co"># crop the raster to the shape file outline of senegal to ensure extents match </span></span>
-<span id="cb9-203"><a href="#cb9-203" aria-hidden="true" tabindex="-1"></a>ur_population <span class="ot">&lt;-</span> <span class="fu">crop</span>(ur_population, <span class="fu">extent</span>(shp))</span>
-<span id="cb9-204"><a href="#cb9-204" aria-hidden="true" tabindex="-1"></a>ur_population <span class="ot">&lt;-</span> <span class="fu">mask</span>(ur_population, shp)</span>
-<span id="cb9-205"><a href="#cb9-205" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb9-206"><a href="#cb9-206" aria-hidden="true" tabindex="-1"></a><span class="co"># for ID-ing regions</span></span>
-<span id="cb9-207"><a href="#cb9-207" aria-hidden="true" tabindex="-1"></a>sf_tibble <span class="ot">&lt;-</span> tibble<span class="sc">::</span><span class="fu">as_tibble</span>(sf<span class="sc">::</span><span class="fu">st_drop_geometry</span>(shp))</span>
-<span id="cb9-208"><a href="#cb9-208" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb9-209"><a href="#cb9-209" aria-hidden="true" tabindex="-1"></a><span class="co"># extract the full GRID3 population to admin-1 units </span></span>
-<span id="cb9-210"><a href="#cb9-210" aria-hidden="true" tabindex="-1"></a>adm1_pop <span class="ot">&lt;-</span></span>
-<span id="cb9-211"><a href="#cb9-211" aria-hidden="true" tabindex="-1"></a>    exactextractr<span class="sc">::</span><span class="fu">exact_extract</span>(population_1km, shp, <span class="st">'sum'</span>, <span class="at">progress =</span> <span class="cn">FALSE</span>) <span class="sc">%&gt;%</span> </span>
-<span id="cb9-212"><a href="#cb9-212" aria-hidden="true" tabindex="-1"></a>    dplyr<span class="sc">::</span><span class="fu">bind_cols</span>(sf_tibble) <span class="sc">%&gt;%</span> </span>
-<span id="cb9-213"><a href="#cb9-213" aria-hidden="true" tabindex="-1"></a>    dplyr<span class="sc">::</span><span class="fu">select</span>(ADM1, <span class="at">total_pop =</span> ...<span class="dv">1</span>)</span>
-<span id="cb9-214"><a href="#cb9-214" aria-hidden="true" tabindex="-1"></a>  </span>
-<span id="cb9-215"><a href="#cb9-215" aria-hidden="true" tabindex="-1"></a><span class="co"># extract urban population to admin-1 units  </span></span>
-<span id="cb9-216"><a href="#cb9-216" aria-hidden="true" tabindex="-1"></a>adm1_urb_pop <span class="ot">&lt;-</span> </span>
-<span id="cb9-217"><a href="#cb9-217" aria-hidden="true" tabindex="-1"></a>    exactextractr<span class="sc">::</span><span class="fu">exact_extract</span>(ur_population, shp, <span class="st">'sum'</span>, <span class="at">progress =</span> <span class="cn">FALSE</span>) <span class="sc">%&gt;%</span> </span>
-<span id="cb9-218"><a href="#cb9-218" aria-hidden="true" tabindex="-1"></a>    dplyr<span class="sc">::</span><span class="fu">bind_cols</span>(sf_tibble) <span class="sc">%&gt;%</span> </span>
-<span id="cb9-219"><a href="#cb9-219" aria-hidden="true" tabindex="-1"></a>    dplyr<span class="sc">::</span><span class="fu">select</span>(ADM1, <span class="at">urban_pop =</span> ...<span class="dv">1</span>)</span>
-<span id="cb9-220"><a href="#cb9-220" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb9-221"><a href="#cb9-221" aria-hidden="true" tabindex="-1"></a><span class="co"># join dataframes together and calculate proportion of the population in urban areas per admin-1 units </span></span>
-<span id="cb9-222"><a href="#cb9-222" aria-hidden="true" tabindex="-1"></a>urb_pop_prop <span class="ot">&lt;-</span> </span>
-<span id="cb9-223"><a href="#cb9-223" aria-hidden="true" tabindex="-1"></a>  <span class="fu">left_join</span>(adm1_pop, adm1_urb_pop) <span class="sc">%&gt;%</span> </span>
-<span id="cb9-224"><a href="#cb9-224" aria-hidden="true" tabindex="-1"></a>  <span class="fu">mutate</span>(<span class="at">prop_ur =</span> urban_pop <span class="sc">/</span> total_pop) <span class="sc">%&gt;%</span> </span>
-<span id="cb9-225"><a href="#cb9-225" aria-hidden="true" tabindex="-1"></a>  <span class="fu">mutate</span>(<span class="at">prop_ur =</span> <span class="fu">case_when</span>(<span class="fu">is.na</span>(prop_ur) <span class="sc">~</span> <span class="dv">0</span>, <span class="cn">TRUE</span> <span class="sc">~</span> prop_ur))</span>
-<span id="cb9-226"><a href="#cb9-226" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb9-227"><a href="#cb9-227" aria-hidden="true" tabindex="-1"></a><span class="co"># plot the proportion of the population living in urban areas by admin-1 units </span></span>
-<span id="cb9-228"><a href="#cb9-228" aria-hidden="true" tabindex="-1"></a>shp_pop <span class="ot">&lt;-</span> </span>
-<span id="cb9-229"><a href="#cb9-229" aria-hidden="true" tabindex="-1"></a>  shp <span class="sc">%&gt;%</span> </span>
-<span id="cb9-230"><a href="#cb9-230" aria-hidden="true" tabindex="-1"></a>  <span class="fu">left_join</span>(urb_pop_prop) </span>
-<span id="cb9-231"><a href="#cb9-231" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb9-232"><a href="#cb9-232" aria-hidden="true" tabindex="-1"></a><span class="fu">ggplot</span>(shp_pop) <span class="sc">+</span></span>
-<span id="cb9-233"><a href="#cb9-233" aria-hidden="true" tabindex="-1"></a>  <span class="fu">geom_sf</span>(<span class="fu">aes</span>(<span class="at">fill=</span>prop_ur<span class="sc">*</span><span class="dv">100</span>), <span class="at">col=</span><span class="cn">NA</span>) <span class="sc">+</span></span>
-<span id="cb9-234"><a href="#cb9-234" aria-hidden="true" tabindex="-1"></a>  <span class="fu">scale_fill_whitebox_c</span>(<span class="at">palette=</span> <span class="st">"deep"</span>) <span class="sc">+</span></span>
-<span id="cb9-235"><a href="#cb9-235" aria-hidden="true" tabindex="-1"></a>  <span class="fu">theme_gray</span>(<span class="dv">10</span>) <span class="sc">+</span></span>
-<span id="cb9-236"><a href="#cb9-236" aria-hidden="true" tabindex="-1"></a>  <span class="fu">theme</span>(<span class="at">axis.text =</span> <span class="fu">element_blank</span>(), </span>
-<span id="cb9-237"><a href="#cb9-237" aria-hidden="true" tabindex="-1"></a>        <span class="at">axis.ticks =</span> <span class="fu">element_blank</span>(), </span>
-<span id="cb9-238"><a href="#cb9-238" aria-hidden="true" tabindex="-1"></a>        <span class="at">panel.grid =</span> <span class="fu">element_blank</span>(),</span>
-<span id="cb9-239"><a href="#cb9-239" aria-hidden="true" tabindex="-1"></a>        <span class="at">legend.position=</span><span class="st">"bottom"</span>, </span>
-<span id="cb9-240"><a href="#cb9-240" aria-hidden="true" tabindex="-1"></a>        <span class="at">legend.key.width =</span> <span class="fu">unit</span>(<span class="dv">2</span>, <span class="st">'cm'</span>)) <span class="sc">+</span></span>
-<span id="cb9-241"><a href="#cb9-241" aria-hidden="true" tabindex="-1"></a>  <span class="fu">labs</span>(<span class="at">fill=</span><span class="st">"%"</span>, <span class="at">title=</span><span class="st">"Proprtion of the population living in urban areas 2020"</span>)</span>
+<span id="cb9-194"><a href="#cb9-194" aria-hidden="true" tabindex="-1"></a><span class="fu">## Calculating the urban proportion of the population in a spatial area defined by an input shape file</span></span>
+<span id="cb9-195"><a href="#cb9-195" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb9-196"><a href="#cb9-196" aria-hidden="true" tabindex="-1"></a>To calculate the proportion of the population in a spatial region that live in urban or rural areas we first need a shape file with defined boundaries e.g. administrative units or health facility catchment areas.</span>
+<span id="cb9-197"><a href="#cb9-197" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb9-198"><a href="#cb9-198" aria-hidden="true" tabindex="-1"></a>For this example we will use a shapefile of the 14 regions of Senegal.</span>
+<span id="cb9-199"><a href="#cb9-199" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb9-200"><a href="#cb9-200" aria-hidden="true" tabindex="-1"></a><span class="in">```{r, dpi=600}</span></span>
+<span id="cb9-201"><a href="#cb9-201" aria-hidden="true" tabindex="-1"></a><span class="co"># crop the raster to the shape file outline of senegal to ensure extents match </span></span>
+<span id="cb9-202"><a href="#cb9-202" aria-hidden="true" tabindex="-1"></a>ur_population <span class="ot">&lt;-</span> <span class="fu">crop</span>(ur_population, <span class="fu">extent</span>(shp))</span>
+<span id="cb9-203"><a href="#cb9-203" aria-hidden="true" tabindex="-1"></a>ur_population <span class="ot">&lt;-</span> <span class="fu">mask</span>(ur_population, shp)</span>
+<span id="cb9-204"><a href="#cb9-204" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb9-205"><a href="#cb9-205" aria-hidden="true" tabindex="-1"></a><span class="co"># for ID-ing regions</span></span>
+<span id="cb9-206"><a href="#cb9-206" aria-hidden="true" tabindex="-1"></a>sf_tibble <span class="ot">&lt;-</span> tibble<span class="sc">::</span><span class="fu">as_tibble</span>(sf<span class="sc">::</span><span class="fu">st_drop_geometry</span>(shp))</span>
+<span id="cb9-207"><a href="#cb9-207" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb9-208"><a href="#cb9-208" aria-hidden="true" tabindex="-1"></a><span class="co"># extract the full GRID3 population to admin-1 units </span></span>
+<span id="cb9-209"><a href="#cb9-209" aria-hidden="true" tabindex="-1"></a>adm1_pop <span class="ot">&lt;-</span></span>
+<span id="cb9-210"><a href="#cb9-210" aria-hidden="true" tabindex="-1"></a>    exactextractr<span class="sc">::</span><span class="fu">exact_extract</span>(population_1km, shp, <span class="st">'sum'</span>, <span class="at">progress =</span> <span class="cn">FALSE</span>) <span class="sc">%&gt;%</span> </span>
+<span id="cb9-211"><a href="#cb9-211" aria-hidden="true" tabindex="-1"></a>    dplyr<span class="sc">::</span><span class="fu">bind_cols</span>(sf_tibble) <span class="sc">%&gt;%</span> </span>
+<span id="cb9-212"><a href="#cb9-212" aria-hidden="true" tabindex="-1"></a>    dplyr<span class="sc">::</span><span class="fu">select</span>(ADM1, <span class="at">total_pop =</span> ...<span class="dv">1</span>)</span>
+<span id="cb9-213"><a href="#cb9-213" aria-hidden="true" tabindex="-1"></a>  </span>
+<span id="cb9-214"><a href="#cb9-214" aria-hidden="true" tabindex="-1"></a><span class="co"># extract urban population to admin-1 units  </span></span>
+<span id="cb9-215"><a href="#cb9-215" aria-hidden="true" tabindex="-1"></a>adm1_urb_pop <span class="ot">&lt;-</span> </span>
+<span id="cb9-216"><a href="#cb9-216" aria-hidden="true" tabindex="-1"></a>    exactextractr<span class="sc">::</span><span class="fu">exact_extract</span>(ur_population, shp, <span class="st">'sum'</span>, <span class="at">progress =</span> <span class="cn">FALSE</span>) <span class="sc">%&gt;%</span> </span>
+<span id="cb9-217"><a href="#cb9-217" aria-hidden="true" tabindex="-1"></a>    dplyr<span class="sc">::</span><span class="fu">bind_cols</span>(sf_tibble) <span class="sc">%&gt;%</span> </span>
+<span id="cb9-218"><a href="#cb9-218" aria-hidden="true" tabindex="-1"></a>    dplyr<span class="sc">::</span><span class="fu">select</span>(ADM1, <span class="at">urban_pop =</span> ...<span class="dv">1</span>)</span>
+<span id="cb9-219"><a href="#cb9-219" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb9-220"><a href="#cb9-220" aria-hidden="true" tabindex="-1"></a><span class="co"># join dataframes together and calculate proportion of the population in urban areas per admin-1 units </span></span>
+<span id="cb9-221"><a href="#cb9-221" aria-hidden="true" tabindex="-1"></a>urb_pop_prop <span class="ot">&lt;-</span> </span>
+<span id="cb9-222"><a href="#cb9-222" aria-hidden="true" tabindex="-1"></a>  <span class="fu">left_join</span>(adm1_pop, adm1_urb_pop) <span class="sc">%&gt;%</span> </span>
+<span id="cb9-223"><a href="#cb9-223" aria-hidden="true" tabindex="-1"></a>  <span class="fu">mutate</span>(<span class="at">prop_ur =</span> urban_pop <span class="sc">/</span> total_pop) <span class="sc">%&gt;%</span> </span>
+<span id="cb9-224"><a href="#cb9-224" aria-hidden="true" tabindex="-1"></a>  <span class="fu">mutate</span>(<span class="at">prop_ur =</span> <span class="fu">case_when</span>(<span class="fu">is.na</span>(prop_ur) <span class="sc">~</span> <span class="dv">0</span>, <span class="cn">TRUE</span> <span class="sc">~</span> prop_ur))</span>
+<span id="cb9-225"><a href="#cb9-225" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb9-226"><a href="#cb9-226" aria-hidden="true" tabindex="-1"></a><span class="co"># plot the proportion of the population living in urban areas by admin-1 units </span></span>
+<span id="cb9-227"><a href="#cb9-227" aria-hidden="true" tabindex="-1"></a>shp_pop <span class="ot">&lt;-</span> </span>
+<span id="cb9-228"><a href="#cb9-228" aria-hidden="true" tabindex="-1"></a>  shp <span class="sc">%&gt;%</span> </span>
+<span id="cb9-229"><a href="#cb9-229" aria-hidden="true" tabindex="-1"></a>  <span class="fu">left_join</span>(urb_pop_prop) </span>
+<span id="cb9-230"><a href="#cb9-230" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb9-231"><a href="#cb9-231" aria-hidden="true" tabindex="-1"></a><span class="fu">ggplot</span>(shp_pop) <span class="sc">+</span></span>
+<span id="cb9-232"><a href="#cb9-232" aria-hidden="true" tabindex="-1"></a>  <span class="fu">geom_sf</span>(<span class="fu">aes</span>(<span class="at">fill=</span>prop_ur<span class="sc">*</span><span class="dv">100</span>), <span class="at">col=</span><span class="cn">NA</span>) <span class="sc">+</span></span>
+<span id="cb9-233"><a href="#cb9-233" aria-hidden="true" tabindex="-1"></a>  <span class="fu">scale_fill_whitebox_c</span>(<span class="at">palette=</span> <span class="st">"deep"</span>) <span class="sc">+</span></span>
+<span id="cb9-234"><a href="#cb9-234" aria-hidden="true" tabindex="-1"></a>  <span class="fu">theme_gray</span>(<span class="dv">10</span>) <span class="sc">+</span></span>
+<span id="cb9-235"><a href="#cb9-235" aria-hidden="true" tabindex="-1"></a>  <span class="fu">theme</span>(<span class="at">axis.text =</span> <span class="fu">element_blank</span>(), </span>
+<span id="cb9-236"><a href="#cb9-236" aria-hidden="true" tabindex="-1"></a>        <span class="at">axis.ticks =</span> <span class="fu">element_blank</span>(), </span>
+<span id="cb9-237"><a href="#cb9-237" aria-hidden="true" tabindex="-1"></a>        <span class="at">panel.grid =</span> <span class="fu">element_blank</span>(),</span>
+<span id="cb9-238"><a href="#cb9-238" aria-hidden="true" tabindex="-1"></a>        <span class="at">legend.position=</span><span class="st">"bottom"</span>, </span>
+<span id="cb9-239"><a href="#cb9-239" aria-hidden="true" tabindex="-1"></a>        <span class="at">legend.key.width =</span> <span class="fu">unit</span>(<span class="dv">2</span>, <span class="st">'cm'</span>)) <span class="sc">+</span></span>
+<span id="cb9-240"><a href="#cb9-240" aria-hidden="true" tabindex="-1"></a>  <span class="fu">labs</span>(<span class="at">fill=</span><span class="st">"%"</span>, <span class="at">title=</span><span class="st">"Proprtion of the population living in urban areas 2020"</span>)</span>
+<span id="cb9-241"><a href="#cb9-241" aria-hidden="true" tabindex="-1"></a></span>
 <span id="cb9-242"><a href="#cb9-242" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb9-243"><a href="#cb9-243" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb9-244"><a href="#cb9-244" aria-hidden="true" tabindex="-1"></a><span class="in">```</span></span>
-<span id="cb9-245"><a href="#cb9-245" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb9-246"><a href="#cb9-246" aria-hidden="true" tabindex="-1"></a><span class="fu">## Classifying point locations based on urban rural pixel classifications</span></span>
-<span id="cb9-247"><a href="#cb9-247" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb9-248"><a href="#cb9-248" aria-hidden="true" tabindex="-1"></a>If geo-location or point data is avaliable, for example the co-ordinates of health facilities, hospitals, schools, pharmacies etc, then we can use the <span class="in">`ur_categories`</span> raster output to classify these services and the communities they serve.</span>
-<span id="cb9-249"><a href="#cb9-249" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb9-250"><a href="#cb9-250" aria-hidden="true" tabindex="-1"></a>Here I create some example coordinates but users should upload their own coordinates of interest here. In this example we include a 2.5km buffer region around each point to account for potential heterogeneity that might be missed from taking just the point-level extraction.</span>
-<span id="cb9-251"><a href="#cb9-251" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb9-254"><a href="#cb9-254" aria-hidden="true" tabindex="-1"></a><span class="in">```{r}</span></span>
-<span id="cb9-255"><a href="#cb9-255" aria-hidden="true" tabindex="-1"></a><span class="co"># example coordinates </span></span>
-<span id="cb9-256"><a href="#cb9-256" aria-hidden="true" tabindex="-1"></a>points <span class="ot">&lt;-</span> <span class="fu">data.frame</span>(<span class="at">name =</span> <span class="fu">c</span>(<span class="st">"a"</span>, <span class="st">"b"</span>, <span class="st">"c"</span>, <span class="st">"d"</span>), </span>
-<span id="cb9-257"><a href="#cb9-257" aria-hidden="true" tabindex="-1"></a>                     <span class="at">latitude =</span> <span class="fu">c</span>(<span class="fl">14.72810</span>, <span class="fl">15.01430</span>, <span class="fl">15.99420</span>, <span class="fl">12.67370</span>), </span>
-<span id="cb9-258"><a href="#cb9-258" aria-hidden="true" tabindex="-1"></a>                     <span class="at">longitude =</span> <span class="fu">c</span>(<span class="sc">-</span><span class="fl">17.45910</span>, <span class="sc">-</span><span class="fl">12.50030</span>, <span class="sc">-</span><span class="fl">15.32010</span>, <span class="sc">-</span><span class="fl">16.09250</span>))</span>
-<span id="cb9-259"><a href="#cb9-259" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb9-260"><a href="#cb9-260" aria-hidden="true" tabindex="-1"></a><span class="co"># transform to a spatial object </span></span>
-<span id="cb9-261"><a href="#cb9-261" aria-hidden="true" tabindex="-1"></a>points   <span class="ot">&lt;-</span> sf<span class="sc">::</span><span class="fu">st_as_sf</span>(points,                                <span class="co"># first argument = data frame with coordinates</span></span>
-<span id="cb9-262"><a href="#cb9-262" aria-hidden="true" tabindex="-1"></a>                          <span class="at">coords =</span> <span class="fu">c</span>(<span class="st">"longitude"</span>, <span class="st">"latitude"</span>),  <span class="co"># name of columns, in quotation marks</span></span>
-<span id="cb9-263"><a href="#cb9-263" aria-hidden="true" tabindex="-1"></a>                          <span class="at">crs =</span> <span class="dv">4326</span>)                           <span class="co"># coordinate reference system to make sense of the numbers</span></span>
-<span id="cb9-264"><a href="#cb9-264" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb9-265"><a href="#cb9-265" aria-hidden="true" tabindex="-1"></a><span class="co"># include a 2.5km buffer region around point location   </span></span>
-<span id="cb9-266"><a href="#cb9-266" aria-hidden="true" tabindex="-1"></a>points_w_buffer <span class="ot">&lt;-</span> terra<span class="sc">::</span><span class="fu">vect</span>(points) <span class="sc">%&gt;%</span> terra<span class="sc">::</span><span class="fu">buffer</span>(<span class="at">width=</span><span class="dv">2500</span>) </span>
-<span id="cb9-267"><a href="#cb9-267" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb9-268"><a href="#cb9-268" aria-hidden="true" tabindex="-1"></a><span class="in">```</span></span>
-<span id="cb9-269"><a href="#cb9-269" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb9-270"><a href="#cb9-270" aria-hidden="true" tabindex="-1"></a>Because we include a buffer region we will then take the mode of the extracted cell values for each of our locations. The following function calculates and returns the mode of the categorical extraction variables.</span>
-<span id="cb9-271"><a href="#cb9-271" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb9-274"><a href="#cb9-274" aria-hidden="true" tabindex="-1"></a><span class="in">```{r}</span></span>
-<span id="cb9-275"><a href="#cb9-275" aria-hidden="true" tabindex="-1"></a>calculate_mode <span class="ot">&lt;-</span> <span class="cf">function</span>(x) {</span>
-<span id="cb9-276"><a href="#cb9-276" aria-hidden="true" tabindex="-1"></a>  uniqx <span class="ot">&lt;-</span> <span class="fu">unique</span>(<span class="fu">na.omit</span>(x))</span>
-<span id="cb9-277"><a href="#cb9-277" aria-hidden="true" tabindex="-1"></a>  uniqx[<span class="fu">which.max</span>(<span class="fu">tabulate</span>(<span class="fu">match</span>(x, uniqx)))]</span>
-<span id="cb9-278"><a href="#cb9-278" aria-hidden="true" tabindex="-1"></a>}</span>
-<span id="cb9-279"><a href="#cb9-279" aria-hidden="true" tabindex="-1"></a><span class="in">```</span></span>
-<span id="cb9-280"><a href="#cb9-280" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb9-281"><a href="#cb9-281" aria-hidden="true" tabindex="-1"></a>Now we can run the extraction and examine the resulting classification.</span>
-<span id="cb9-282"><a href="#cb9-282" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb9-283"><a href="#cb9-283" aria-hidden="true" tabindex="-1"></a><span class="in">```{r, dpi=600}</span></span>
-<span id="cb9-284"><a href="#cb9-284" aria-hidden="true" tabindex="-1"></a><span class="co"># crop the raster to the shape file outline of senegal to ensure extents match </span></span>
-<span id="cb9-285"><a href="#cb9-285" aria-hidden="true" tabindex="-1"></a>ur_categories <span class="ot">&lt;-</span> <span class="fu">crop</span>(ur_categories, <span class="fu">extent</span>(shp))</span>
-<span id="cb9-286"><a href="#cb9-286" aria-hidden="true" tabindex="-1"></a>ur_categories <span class="ot">&lt;-</span> <span class="fu">mask</span>(ur_categories, shp)</span>
-<span id="cb9-287"><a href="#cb9-287" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb9-288"><a href="#cb9-288" aria-hidden="true" tabindex="-1"></a><span class="co"># extraction</span></span>
-<span id="cb9-289"><a href="#cb9-289" aria-hidden="true" tabindex="-1"></a>points_classification <span class="ot">&lt;-</span> </span>
-<span id="cb9-290"><a href="#cb9-290" aria-hidden="true" tabindex="-1"></a>  terra<span class="sc">::</span><span class="fu">extract</span>(ur_categories, points_w_buffer) <span class="sc">%&gt;%</span></span>
-<span id="cb9-291"><a href="#cb9-291" aria-hidden="true" tabindex="-1"></a>  dplyr<span class="sc">::</span><span class="fu">group_by</span>(ID) <span class="sc">%&gt;%</span></span>
-<span id="cb9-292"><a href="#cb9-292" aria-hidden="true" tabindex="-1"></a>  dplyr<span class="sc">::</span><span class="fu">summarise</span>(dplyr<span class="sc">::</span><span class="fu">across</span>(dplyr<span class="sc">::</span><span class="fu">everything</span>(), list)) <span class="sc">%&gt;%</span></span>
-<span id="cb9-293"><a href="#cb9-293" aria-hidden="true" tabindex="-1"></a>  tidyr<span class="sc">::</span><span class="fu">unnest</span>(<span class="at">cols =</span> <span class="fu">c</span>(urban_rural)) <span class="sc">%&gt;%</span></span>
-<span id="cb9-294"><a href="#cb9-294" aria-hidden="true" tabindex="-1"></a>  dplyr<span class="sc">::</span><span class="fu">group_by</span>(ID) <span class="sc">%&gt;%</span></span>
-<span id="cb9-295"><a href="#cb9-295" aria-hidden="true" tabindex="-1"></a>  dplyr<span class="sc">::</span><span class="fu">summarize</span>(<span class="at">classification =</span> <span class="fu">calculate_mode</span>(urban_rural)) </span>
-<span id="cb9-296"><a href="#cb9-296" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb9-297"><a href="#cb9-297" aria-hidden="true" tabindex="-1"></a><span class="co"># as a spatial object</span></span>
-<span id="cb9-298"><a href="#cb9-298" aria-hidden="true" tabindex="-1"></a>points_classification_sf <span class="ot">&lt;-</span> <span class="fu">bind_cols</span>(points, points_classification)</span>
-<span id="cb9-299"><a href="#cb9-299" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb9-300"><a href="#cb9-300" aria-hidden="true" tabindex="-1"></a><span class="co"># plot </span></span>
-<span id="cb9-301"><a href="#cb9-301" aria-hidden="true" tabindex="-1"></a><span class="fu">ggplot</span>() <span class="sc">+</span></span>
-<span id="cb9-302"><a href="#cb9-302" aria-hidden="true" tabindex="-1"></a>  <span class="fu">geom_spatraster</span>(<span class="at">data =</span> ur_categories) <span class="sc">+</span></span>
-<span id="cb9-303"><a href="#cb9-303" aria-hidden="true" tabindex="-1"></a>  <span class="fu">geom_sf</span>(<span class="at">data =</span> points_classification_sf, <span class="at">mapping=</span><span class="fu">aes</span>(<span class="at">col=</span>classification), <span class="at">shape =</span> <span class="dv">19</span>,</span>
-<span id="cb9-304"><a href="#cb9-304" aria-hidden="true" tabindex="-1"></a>          <span class="at">fill=</span><span class="cn">NA</span>, <span class="at">size=</span><span class="dv">1</span>)<span class="sc">+</span></span>
-<span id="cb9-305"><a href="#cb9-305" aria-hidden="true" tabindex="-1"></a>  <span class="fu">theme_grey</span>(<span class="dv">12</span>) <span class="sc">+</span></span>
-<span id="cb9-306"><a href="#cb9-306" aria-hidden="true" tabindex="-1"></a>  <span class="fu">labs</span>(<span class="at">title =</span> <span class="st">""</span>, <span class="at">fill=</span><span class="st">" "</span>, <span class="at">col=</span><span class="st">" "</span>) <span class="sc">+</span></span>
-<span id="cb9-307"><a href="#cb9-307" aria-hidden="true" tabindex="-1"></a>  <span class="fu">scale_color_manual</span>(<span class="at">values=</span><span class="fu">c</span>(<span class="st">"#b01f35"</span>, <span class="st">"#C6EBC5"</span>),</span>
-<span id="cb9-308"><a href="#cb9-308" aria-hidden="true" tabindex="-1"></a>                     <span class="at">labels=</span><span class="fu">c</span>(<span class="st">"urban"</span>, <span class="st">"rural"</span>), <span class="at">breaks=</span><span class="fu">c</span>(<span class="st">"urban"</span>, <span class="st">"rural"</span>)) <span class="sc">+</span></span>
-<span id="cb9-309"><a href="#cb9-309" aria-hidden="true" tabindex="-1"></a>  <span class="fu">scale_fill_manual</span>(<span class="at">values=</span><span class="fu">c</span>(<span class="st">"#FA7070"</span>, <span class="st">"#4f7942"</span>), </span>
-<span id="cb9-310"><a href="#cb9-310" aria-hidden="true" tabindex="-1"></a>                    <span class="at">labels=</span><span class="fu">c</span>(<span class="st">"urban"</span>, <span class="st">"rural"</span>), <span class="at">breaks=</span><span class="fu">c</span>(<span class="st">"urban"</span>, <span class="st">"rural"</span>)) <span class="sc">+</span></span>
-<span id="cb9-311"><a href="#cb9-311" aria-hidden="true" tabindex="-1"></a>  <span class="fu">theme</span>(<span class="at">axis.text =</span> <span class="fu">element_blank</span>(),</span>
-<span id="cb9-312"><a href="#cb9-312" aria-hidden="true" tabindex="-1"></a>        <span class="at">axis.ticks =</span> <span class="fu">element_blank</span>(),</span>
-<span id="cb9-313"><a href="#cb9-313" aria-hidden="true" tabindex="-1"></a>        <span class="at">panel.grid =</span> <span class="fu">element_blank</span>(),</span>
-<span id="cb9-314"><a href="#cb9-314" aria-hidden="true" tabindex="-1"></a>        <span class="at">legend.position=</span><span class="st">"bottom"</span>)</span>
+<span id="cb9-243"><a href="#cb9-243" aria-hidden="true" tabindex="-1"></a><span class="in">```</span></span>
+<span id="cb9-244"><a href="#cb9-244" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb9-245"><a href="#cb9-245" aria-hidden="true" tabindex="-1"></a><span class="fu">## Classifying point locations based on urban rural pixel classifications</span></span>
+<span id="cb9-246"><a href="#cb9-246" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb9-247"><a href="#cb9-247" aria-hidden="true" tabindex="-1"></a>If geo-location or point data is available, for example the co-ordinates of health facilities, hospitals, schools, pharmacies etc, then we can use the <span class="in">`ur_categories`</span> raster output to classify these services and the communities they serve.</span>
+<span id="cb9-248"><a href="#cb9-248" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb9-249"><a href="#cb9-249" aria-hidden="true" tabindex="-1"></a>Here I create some example coordinates but users should upload their own coordinates of interest here. In this example we include a 2.5 km buffer region around each point to account for potential heterogeneity that might be missed from taking just the point-level extraction.</span>
+<span id="cb9-250"><a href="#cb9-250" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb9-253"><a href="#cb9-253" aria-hidden="true" tabindex="-1"></a><span class="in">```{r}</span></span>
+<span id="cb9-254"><a href="#cb9-254" aria-hidden="true" tabindex="-1"></a><span class="co"># example coordinates </span></span>
+<span id="cb9-255"><a href="#cb9-255" aria-hidden="true" tabindex="-1"></a>points <span class="ot">&lt;-</span> <span class="fu">data.frame</span>(<span class="at">name =</span> <span class="fu">c</span>(<span class="st">"a"</span>, <span class="st">"b"</span>, <span class="st">"c"</span>, <span class="st">"d"</span>), </span>
+<span id="cb9-256"><a href="#cb9-256" aria-hidden="true" tabindex="-1"></a>                     <span class="at">latitude =</span> <span class="fu">c</span>(<span class="fl">14.72810</span>, <span class="fl">15.01430</span>, <span class="fl">15.99420</span>, <span class="fl">12.67370</span>), </span>
+<span id="cb9-257"><a href="#cb9-257" aria-hidden="true" tabindex="-1"></a>                     <span class="at">longitude =</span> <span class="fu">c</span>(<span class="sc">-</span><span class="fl">17.45910</span>, <span class="sc">-</span><span class="fl">12.50030</span>, <span class="sc">-</span><span class="fl">15.32010</span>, <span class="sc">-</span><span class="fl">16.09250</span>))</span>
+<span id="cb9-258"><a href="#cb9-258" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb9-259"><a href="#cb9-259" aria-hidden="true" tabindex="-1"></a><span class="co"># transform to a spatial object </span></span>
+<span id="cb9-260"><a href="#cb9-260" aria-hidden="true" tabindex="-1"></a>points   <span class="ot">&lt;-</span> sf<span class="sc">::</span><span class="fu">st_as_sf</span>(points,                                <span class="co"># first argument = data frame with coordinates</span></span>
+<span id="cb9-261"><a href="#cb9-261" aria-hidden="true" tabindex="-1"></a>                          <span class="at">coords =</span> <span class="fu">c</span>(<span class="st">"longitude"</span>, <span class="st">"latitude"</span>),  <span class="co"># name of columns, in quotation marks</span></span>
+<span id="cb9-262"><a href="#cb9-262" aria-hidden="true" tabindex="-1"></a>                          <span class="at">crs =</span> <span class="dv">4326</span>)                           <span class="co"># coordinate reference system to make sense of the numbers</span></span>
+<span id="cb9-263"><a href="#cb9-263" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb9-264"><a href="#cb9-264" aria-hidden="true" tabindex="-1"></a><span class="co"># include a 2.5km buffer region around point location   </span></span>
+<span id="cb9-265"><a href="#cb9-265" aria-hidden="true" tabindex="-1"></a>points_w_buffer <span class="ot">&lt;-</span> terra<span class="sc">::</span><span class="fu">vect</span>(points) <span class="sc">%&gt;%</span> terra<span class="sc">::</span><span class="fu">buffer</span>(<span class="at">width=</span><span class="dv">2500</span>) </span>
+<span id="cb9-266"><a href="#cb9-266" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb9-267"><a href="#cb9-267" aria-hidden="true" tabindex="-1"></a><span class="in">```</span></span>
+<span id="cb9-268"><a href="#cb9-268" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb9-269"><a href="#cb9-269" aria-hidden="true" tabindex="-1"></a>Because we include a buffer region we will then take the mode of the extracted cell values for each of our locations. The following function calculates and returns the mode of the categorical extraction variables.</span>
+<span id="cb9-270"><a href="#cb9-270" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb9-273"><a href="#cb9-273" aria-hidden="true" tabindex="-1"></a><span class="in">```{r}</span></span>
+<span id="cb9-274"><a href="#cb9-274" aria-hidden="true" tabindex="-1"></a>calculate_mode <span class="ot">&lt;-</span> <span class="cf">function</span>(x) {</span>
+<span id="cb9-275"><a href="#cb9-275" aria-hidden="true" tabindex="-1"></a>  uniqx <span class="ot">&lt;-</span> <span class="fu">unique</span>(<span class="fu">na.omit</span>(x))</span>
+<span id="cb9-276"><a href="#cb9-276" aria-hidden="true" tabindex="-1"></a>  uniqx[<span class="fu">which.max</span>(<span class="fu">tabulate</span>(<span class="fu">match</span>(x, uniqx)))]</span>
+<span id="cb9-277"><a href="#cb9-277" aria-hidden="true" tabindex="-1"></a>}</span>
+<span id="cb9-278"><a href="#cb9-278" aria-hidden="true" tabindex="-1"></a><span class="in">```</span></span>
+<span id="cb9-279"><a href="#cb9-279" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb9-280"><a href="#cb9-280" aria-hidden="true" tabindex="-1"></a>Now we can run the extraction and examine the resulting classification.</span>
+<span id="cb9-281"><a href="#cb9-281" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb9-282"><a href="#cb9-282" aria-hidden="true" tabindex="-1"></a><span class="in">```{r, dpi=600}</span></span>
+<span id="cb9-283"><a href="#cb9-283" aria-hidden="true" tabindex="-1"></a><span class="co"># crop the raster to the shape file outline of senegal to ensure extents match </span></span>
+<span id="cb9-284"><a href="#cb9-284" aria-hidden="true" tabindex="-1"></a>ur_categories <span class="ot">&lt;-</span> <span class="fu">crop</span>(ur_categories, <span class="fu">extent</span>(shp))</span>
+<span id="cb9-285"><a href="#cb9-285" aria-hidden="true" tabindex="-1"></a>ur_categories <span class="ot">&lt;-</span> <span class="fu">mask</span>(ur_categories, shp)</span>
+<span id="cb9-286"><a href="#cb9-286" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb9-287"><a href="#cb9-287" aria-hidden="true" tabindex="-1"></a><span class="co"># extraction</span></span>
+<span id="cb9-288"><a href="#cb9-288" aria-hidden="true" tabindex="-1"></a>points_classification <span class="ot">&lt;-</span> </span>
+<span id="cb9-289"><a href="#cb9-289" aria-hidden="true" tabindex="-1"></a>  terra<span class="sc">::</span><span class="fu">extract</span>(ur_categories, points_w_buffer) <span class="sc">%&gt;%</span></span>
+<span id="cb9-290"><a href="#cb9-290" aria-hidden="true" tabindex="-1"></a>  dplyr<span class="sc">::</span><span class="fu">group_by</span>(ID) <span class="sc">%&gt;%</span></span>
+<span id="cb9-291"><a href="#cb9-291" aria-hidden="true" tabindex="-1"></a>  dplyr<span class="sc">::</span><span class="fu">summarise</span>(dplyr<span class="sc">::</span><span class="fu">across</span>(dplyr<span class="sc">::</span><span class="fu">everything</span>(), list)) <span class="sc">%&gt;%</span></span>
+<span id="cb9-292"><a href="#cb9-292" aria-hidden="true" tabindex="-1"></a>  tidyr<span class="sc">::</span><span class="fu">unnest</span>(<span class="at">cols =</span> <span class="fu">c</span>(urban_rural)) <span class="sc">%&gt;%</span></span>
+<span id="cb9-293"><a href="#cb9-293" aria-hidden="true" tabindex="-1"></a>  dplyr<span class="sc">::</span><span class="fu">group_by</span>(ID) <span class="sc">%&gt;%</span></span>
+<span id="cb9-294"><a href="#cb9-294" aria-hidden="true" tabindex="-1"></a>  dplyr<span class="sc">::</span><span class="fu">summarize</span>(<span class="at">classification =</span> <span class="fu">calculate_mode</span>(urban_rural)) </span>
+<span id="cb9-295"><a href="#cb9-295" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb9-296"><a href="#cb9-296" aria-hidden="true" tabindex="-1"></a><span class="co"># as a spatial object</span></span>
+<span id="cb9-297"><a href="#cb9-297" aria-hidden="true" tabindex="-1"></a>points_classification_sf <span class="ot">&lt;-</span> <span class="fu">bind_cols</span>(points, points_classification)</span>
+<span id="cb9-298"><a href="#cb9-298" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb9-299"><a href="#cb9-299" aria-hidden="true" tabindex="-1"></a><span class="co"># plot </span></span>
+<span id="cb9-300"><a href="#cb9-300" aria-hidden="true" tabindex="-1"></a><span class="fu">ggplot</span>() <span class="sc">+</span></span>
+<span id="cb9-301"><a href="#cb9-301" aria-hidden="true" tabindex="-1"></a>  <span class="fu">geom_spatraster</span>(<span class="at">data =</span> ur_categories) <span class="sc">+</span></span>
+<span id="cb9-302"><a href="#cb9-302" aria-hidden="true" tabindex="-1"></a>  <span class="fu">geom_sf</span>(<span class="at">data =</span> points_classification_sf, <span class="at">mapping=</span><span class="fu">aes</span>(<span class="at">col=</span>classification), <span class="at">shape =</span> <span class="dv">19</span>,</span>
+<span id="cb9-303"><a href="#cb9-303" aria-hidden="true" tabindex="-1"></a>          <span class="at">fill=</span><span class="cn">NA</span>, <span class="at">size=</span><span class="dv">1</span>)<span class="sc">+</span></span>
+<span id="cb9-304"><a href="#cb9-304" aria-hidden="true" tabindex="-1"></a>  <span class="fu">theme_grey</span>(<span class="dv">12</span>) <span class="sc">+</span></span>
+<span id="cb9-305"><a href="#cb9-305" aria-hidden="true" tabindex="-1"></a>  <span class="fu">labs</span>(<span class="at">title =</span> <span class="st">""</span>, <span class="at">fill=</span><span class="st">" "</span>, <span class="at">col=</span><span class="st">" "</span>) <span class="sc">+</span></span>
+<span id="cb9-306"><a href="#cb9-306" aria-hidden="true" tabindex="-1"></a>  <span class="fu">scale_color_manual</span>(<span class="at">values=</span><span class="fu">c</span>(<span class="st">"#b01f35"</span>, <span class="st">"#C6EBC5"</span>),</span>
+<span id="cb9-307"><a href="#cb9-307" aria-hidden="true" tabindex="-1"></a>                     <span class="at">labels=</span><span class="fu">c</span>(<span class="st">"urban"</span>, <span class="st">"rural"</span>), <span class="at">breaks=</span><span class="fu">c</span>(<span class="st">"urban"</span>, <span class="st">"rural"</span>)) <span class="sc">+</span></span>
+<span id="cb9-308"><a href="#cb9-308" aria-hidden="true" tabindex="-1"></a>  <span class="fu">scale_fill_manual</span>(<span class="at">values=</span><span class="fu">c</span>(<span class="st">"#FA7070"</span>, <span class="st">"#4f7942"</span>), </span>
+<span id="cb9-309"><a href="#cb9-309" aria-hidden="true" tabindex="-1"></a>                    <span class="at">labels=</span><span class="fu">c</span>(<span class="st">"urban"</span>, <span class="st">"rural"</span>), <span class="at">breaks=</span><span class="fu">c</span>(<span class="st">"urban"</span>, <span class="st">"rural"</span>)) <span class="sc">+</span></span>
+<span id="cb9-310"><a href="#cb9-310" aria-hidden="true" tabindex="-1"></a>  <span class="fu">theme</span>(<span class="at">axis.text =</span> <span class="fu">element_blank</span>(),</span>
+<span id="cb9-311"><a href="#cb9-311" aria-hidden="true" tabindex="-1"></a>        <span class="at">axis.ticks =</span> <span class="fu">element_blank</span>(),</span>
+<span id="cb9-312"><a href="#cb9-312" aria-hidden="true" tabindex="-1"></a>        <span class="at">panel.grid =</span> <span class="fu">element_blank</span>(),</span>
+<span id="cb9-313"><a href="#cb9-313" aria-hidden="true" tabindex="-1"></a>        <span class="at">legend.position=</span><span class="st">"bottom"</span>)</span>
+<span id="cb9-314"><a href="#cb9-314" aria-hidden="true" tabindex="-1"></a></span>
 <span id="cb9-315"><a href="#cb9-315" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb9-316"><a href="#cb9-316" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb9-317"><a href="#cb9-317" aria-hidden="true" tabindex="-1"></a><span class="in">```</span></span>
+<span id="cb9-316"><a href="#cb9-316" aria-hidden="true" tabindex="-1"></a><span class="in">```</span></span>
 </code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
 </div></div></div></div></div>
 </div> <!-- /content -->
-<script>var lightboxQuarto = GLightbox({"openEffect":"zoom","descPosition":"bottom","selector":".lightbox","loop":true,"closeEffect":"zoom"});</script>
+<script>var lightboxQuarto = GLightbox({"selector":".lightbox","closeEffect":"zoom","loop":true,"descPosition":"bottom","openEffect":"zoom"});</script>
 
 
 
