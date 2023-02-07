@@ -3,6 +3,7 @@ title: "Example post"
 author: "Justin Millar"
 date: "10/03/2022"
 categories: [remote sensing, R, raster]
+draft: true
 toc: true
 format:
   html:
