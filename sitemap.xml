@@ -1,19 +1,23 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">
   <url>
-    <loc>https://PATH-Global-Health.github.io/MNTD-tech-docs/about.html</loc>
-    <lastmod>2022-07-29T17:24:03.189Z</lastmod>
+    <loc>https://github.com/PATH-Global-Health/MNTD-tech-docs/index.html</loc>
+    <lastmod>2023-02-07T01:54:11.316Z</lastmod>
   </url>
   <url>
-    <loc>https://PATH-Global-Health.github.io/MNTD-tech-docs/index.html</loc>
-    <lastmod>2022-07-29T17:24:03.811Z</lastmod>
+    <loc>https://github.com/PATH-Global-Health/MNTD-tech-docs/posts/modistsp/index.html</loc>
+    <lastmod>2023-02-07T01:54:12.708Z</lastmod>
   </url>
   <url>
-    <loc>https://PATH-Global-Health.github.io/MNTD-tech-docs/posts/elevation-rasters/index.html</loc>
-    <lastmod>2022-07-29T17:24:05.148Z</lastmod>
+    <loc>https://github.com/PATH-Global-Health/MNTD-tech-docs/posts/elevation-rasters/index.html</loc>
+    <lastmod>2023-02-07T01:54:13.880Z</lastmod>
   </url>
   <url>
-    <loc>https://PATH-Global-Health.github.io/MNTD-tech-docs/posts/modistsp/index.html</loc>
-    <lastmod>2022-07-29T17:24:06.840Z</lastmod>
+    <loc>https://github.com/PATH-Global-Health/MNTD-tech-docs/posts/urban-rural-pathtools/index.html</loc>
+    <lastmod>2023-02-07T01:54:14.920Z</lastmod>
+  </url>
+  <url>
+    <loc>https://github.com/PATH-Global-Health/MNTD-tech-docs/about.html</loc>
+    <lastmod>2023-02-07T01:54:15.228Z</lastmod>
   </url>
 </urlset>

@@ -1,1 +1,1 @@
-Sitemap: https://PATH-Global-Health.github.io/MNTD-tech-docs/sitemap.xml
+Sitemap: https://github.com/PATH-Global-Health/MNTD-tech-docs/sitemap.xml

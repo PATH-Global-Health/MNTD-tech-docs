@@ -2,7 +2,7 @@
 <html xmlns="http://www.w3.org/1999/xhtml" lang="en" xml:lang="en"><head>
 
 <meta charset="utf-8">
-<meta name="generator" content="quarto-1.0.35">
+<meta name="generator" content="quarto-1.2.335">
 
 <meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=yes">
 
@@ -11,10 +11,15 @@
 <style>
 code{white-space: pre-wrap;}
 span.smallcaps{font-variant: small-caps;}
-span.underline{text-decoration: underline;}
-div.column{display: inline-block; vertical-align: top; width: 50%;}
+div.columns{display: flex; gap: min(4vw, 1.5em);}
+div.column{flex: auto; overflow-x: auto;}
 div.hanging-indent{margin-left: 1.5em; text-indent: -1.5em;}
 ul.task-list{list-style: none;}
+ul.task-list li input[type="checkbox"] {
+  width: 0.8em;
+  margin: 0 0.8em 0.2em -1.6em;
+  vertical-align: middle;
+}
 </style>
 
 
@@ -105,26 +110,29 @@ gtag('config', 'G-6DDVRC28MC', { 'anonymize_ip': true});
   <header id="quarto-header" class="headroom fixed-top">
     <nav class="navbar navbar-expand-lg navbar-dark ">
       <div class="navbar-container container-fluid">
-      <a class="navbar-brand" href="./index.html">
+      <div class="navbar-brand-container">
+    <a class="navbar-brand" href="./index.html">
     <span class="navbar-title">PATH Malaria &amp; NTDs Technical Docs</span>
-  </a>
+    </a>
+  </div>
           <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarCollapse" aria-controls="navbarCollapse" aria-expanded="false" aria-label="Toggle navigation" onclick="if (window.quartoToggleHeadroom) { window.quartoToggleHeadroom(); }">
   <span class="navbar-toggler-icon"></span>
 </button>
           <div class="collapse navbar-collapse" id="navbarCollapse">
             <ul class="navbar-nav navbar-nav-scroll ms-auto">
   <li class="nav-item">
-    <a class="nav-link" href="./about.html">About</a>
+    <a class="nav-link" href="./about.html">
+ <span class="menu-text">About</span></a>
   </li>  
   <li class="nav-item compact">
     <a class="nav-link" href="https://github.com/PATH-Global-Health/MNTD-tech-docs"><i class="bi bi-github" role="img">
 </i> 
- </a>
+ <span class="menu-text"></span></a>
   </li>  
   <li class="nav-item compact">
     <a class="nav-link" href="https://twitter.com/PATHMalaria"><i class="bi bi-twitter" role="img">
 </i> 
- </a>
+ <span class="menu-text"></span></a>
   </li>  
 </ul>
               <div id="quarto-search" class="" title="Search"></div>
@@ -138,7 +146,7 @@ gtag('config', 'G-6DDVRC28MC', { 'anonymize_ip': true});
 <!-- margin-sidebar -->
     <div id="quarto-margin-sidebar" class="sidebar margin-sidebar">
         
-    <h5 class="quarto-listing-category-title">Categories</h5><div class="quarto-listing-category category-default"><div class="category" data-category="">All <span class="quarto-category-count">(2)</span></div><div class="category" data-category="R">R <span class="quarto-category-count">(2)</span></div><div class="category" data-category="raster">raster <span class="quarto-category-count">(2)</span></div><div class="category" data-category="remote sensing">remote sensing <span class="quarto-category-count">(2)</span></div></div></div>
+    <h5 class="quarto-listing-category-title">Categories</h5><div class="quarto-listing-category category-default"><div class="category" data-category="">All <span class="quarto-category-count">(3)</span></div><div class="category" data-category="R">R <span class="quarto-category-count">(3)</span></div><div class="category" data-category="raster">raster <span class="quarto-category-count">(3)</span></div><div class="category" data-category="remote sensing">remote sensing <span class="quarto-category-count">(2)</span></div><div class="category" data-category="urbanization">urbanization <span class="quarto-category-count">(1)</span></div></div></div>
 <!-- main -->
 <main class="content quarto-banner-title-block column-page-left" id="quarto-document-content">
 
@@ -150,7 +158,48 @@ gtag('config', 'G-6DDVRC28MC', { 'anonymize_ip': true});
 
 <div class="quarto-listing quarto-listing-container-default" id="listing-listing">
 <div class="list quarto-listing-default">
-<div class="quarto-post image-right" data-index="0" data-categories="remote sensing,R,raster" data-listing-date-sort="1658732400000" data-listing-file-modified-sort="1658956311502" data-listing-reading-time-sort="8.1">
+<div class="quarto-post image-right" data-index="0" data-categories="R,raster,urbanization" data-listing-date-sort="1671494400000" data-listing-file-modified-sort="1675734838891" data-listing-reading-time-sort="11.065">
+<div class="thumbnail">
+<p><a href="./posts/urban-rural-pathtools/index.html"> <img src="./posts/urban-rural-pathtools/image.jpg" class="thumnail-image"> </a></p>
+</div>
+<div class="body">
+<a href="./posts/urban-rural-pathtools/index.html">
+<h3 class="no-anchor listing-title">
+Defining urban areas based on population rasters
+</h3>
+<div class="listing-subtitle">
+
+</div>
+</a>
+<div class="listing-categories">
+<div class="listing-category" onclick="window.quartoListingCategory('R'); return false;">
+R
+</div>
+<div class="listing-category" onclick="window.quartoListingCategory('raster'); return false;">
+raster
+</div>
+<div class="listing-category" onclick="window.quartoListingCategory('urbanization'); return false;">
+urbanization
+</div>
+</div>
+<a href="./posts/urban-rural-pathtools/index.html">
+<div class="listing-description">
+This process uses an R package developed by PATH. This package is hosted on Github, so we have to use the <code>devtools</code> packa…
+</div>
+</a>
+</div>
+<div class="metadata">
+<a href="./posts/urban-rural-pathtools/index.html">
+<div class="listing-date">
+Dec 20, 2022
+</div>
+<div class="listing-author">
+Hayley Thompson
+</div>
+</a>
+</div>
+</div>
+<div class="quarto-post image-right" data-index="1" data-categories="remote sensing,R,raster" data-listing-date-sort="1658707200000" data-listing-file-modified-sort="1675734838871" data-listing-reading-time-sort="8.1">
 <div class="thumbnail">
 <p><a href="./posts/modistsp/index.html"> <img src="./posts/modistsp/thumbnail.jpg" class="thumnail-image"> </a></p>
 </div>
@@ -176,7 +225,7 @@ raster
 </div>
 <a href="./posts/modistsp/index.html">
 <div class="listing-description">
-The <code>MODIStsp</code> package provides an R interface to the raster images derived from MODIS Land Products data. This package provides an interactive user interface, as well as functions for programmatic queries for the time-series rasters. Note that this library requires and active internet connection.
+The <code>MODIStsp</code> package provides an R interface to the raster images derived from MODIS Land Products data. This package provides an…
 </div>
 </a>
 </div>
@@ -191,7 +240,7 @@ Justin Millar
 </a>
 </div>
 </div>
-<div class="quarto-post image-right" data-index="1" data-categories="remote sensing,R,raster" data-listing-date-sort="1657695600000" data-listing-file-modified-sort="1658954417559" data-listing-reading-time-sort="1.675">
+<div class="quarto-post image-right" data-index="2" data-categories="remote sensing,R,raster" data-listing-date-sort="1657670400000" data-listing-file-modified-sort="1675734838867" data-listing-reading-time-sort="1.675">
 <div class="thumbnail">
 <p><a href="./posts/elevation-rasters/index.html"> <img src="./posts/elevation-rasters/image.jpg" class="thumnail-image"> </a></p>
 </div>
@@ -217,7 +266,7 @@ raster
 </div>
 <a href="./posts/elevation-rasters/index.html">
 <div class="listing-description">
-We will be using a relatively new R package called <code>whatarelief</code>. This package is hosted on Github, but is not currently on CRAN so we have to use the <code>devtools</code> package to install (you may need to install this package first).
+We will be using a relatively new R package called <code>whatarelief</code>. This package is hosted on Github, but is not currently on CRAN so we have to use the <code>devtools</code> package to install (you may need to install…
 </div>
 </a>
 </div>
@@ -278,7 +327,24 @@ window.document.addEventListener("DOMContentLoaded", function (event) {
     button.classList.add('code-copy-button-checked');
     var currentTitle = button.getAttribute("title");
     button.setAttribute("title", "Copied!");
+    let tooltip;
+    if (window.bootstrap) {
+      button.setAttribute("data-bs-toggle", "tooltip");
+      button.setAttribute("data-bs-placement", "left");
+      button.setAttribute("data-bs-title", "Copied!");
+      tooltip = new bootstrap.Tooltip(button, 
+        { trigger: "manual", 
+          customClass: "code-copy-button-tooltip",
+          offset: [0, -8]});
+      tooltip.show();    
+    }
     setTimeout(function() {
+      if (tooltip) {
+        tooltip.hide();
+        button.removeAttribute("data-bs-title");
+        button.removeAttribute("data-bs-toggle");
+        button.removeAttribute("data-bs-placement");
+      }
       button.setAttribute("title", currentTitle);
       button.classList.remove('code-copy-button-checked');
     }, 1000);
@@ -306,31 +372,50 @@ window.document.addEventListener("DOMContentLoaded", function (event) {
   for (var i=0; i<noterefs.length; i++) {
     const ref = noterefs[i];
     tippyHover(ref, function() {
-      let href = ref.getAttribute('href');
+      // use id or data attribute instead here
+      let href = ref.getAttribute('data-footnote-href') || ref.getAttribute('href');
       try { href = new URL(href).hash; } catch {}
       const id = href.replace(/^#\/?/, "");
       const note = window.document.getElementById(id);
       return note.innerHTML;
     });
   }
+  const findCites = (el) => {
+    const parentEl = el.parentElement;
+    if (parentEl) {
+      const cites = parentEl.dataset.cites;
+      if (cites) {
+        return {
+          el,
+          cites: cites.split(' ')
+        };
+      } else {
+        return findCites(el.parentElement)
+      }
+    } else {
+      return undefined;
+    }
+  };
   var bibliorefs = window.document.querySelectorAll('a[role="doc-biblioref"]');
   for (var i=0; i<bibliorefs.length; i++) {
     const ref = bibliorefs[i];
-    const cites = ref.parentNode.getAttribute('data-cites').split(' ');
-    tippyHover(ref, function() {
-      var popup = window.document.createElement('div');
-      cites.forEach(function(cite) {
-        var citeDiv = window.document.createElement('div');
-        citeDiv.classList.add('hanging-indent');
-        citeDiv.classList.add('csl-entry');
-        var biblioDiv = window.document.getElementById('ref-' + cite);
-        if (biblioDiv) {
-          citeDiv.innerHTML = biblioDiv.innerHTML;
-        }
-        popup.appendChild(citeDiv);
+    const citeInfo = findCites(ref);
+    if (citeInfo) {
+      tippyHover(citeInfo.el, function() {
+        var popup = window.document.createElement('div');
+        citeInfo.cites.forEach(function(cite) {
+          var citeDiv = window.document.createElement('div');
+          citeDiv.classList.add('hanging-indent');
+          citeDiv.classList.add('csl-entry');
+          var biblioDiv = window.document.getElementById('ref-' + cite);
+          if (biblioDiv) {
+            citeDiv.innerHTML = biblioDiv.innerHTML;
+          }
+          popup.appendChild(citeDiv);
+        });
+        return popup.innerHTML;
       });
-      return popup.innerHTML;
-    });
+    }
   }
 });
 </script>
