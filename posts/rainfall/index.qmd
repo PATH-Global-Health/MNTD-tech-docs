@@ -24,7 +24,7 @@ Learn more about CHIRPS at [UCSB's Climate Hazards Center](https://www.chc.ucsb.
 
 The `PATHtools` `rainfall()` function allows you to extract estimates of average rainfall across one or more areas saved as project shapefiles. First, install `PATHtools`.
 
-```{r}
+```{r message=FALSE}
 install.packages("devtools", repos = "http://cran.us.r-project.org")
 devtools::install_github("PATH-Global-Health/PATHtools")
 ```
@@ -70,7 +70,7 @@ terra::plot(rain_areal_raster$`chirps_2012-01-01`)
 
 To get estimated daily rainfall at specified locations, such as health facilities, we can use the `chirps` package. Here, we'll create a data.frame of points and download their data.
 
-```{r}
+```{r message=FALSE}
 install.packages("chirps", repos = "http://cran.us.r-project.org")
 library(chirps)
 
