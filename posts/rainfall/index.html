@@ -233,23 +233,23 @@ gtag('config', 'G-6DDVRC28MC', { 'anonymize_ip': true});
 
 <section id="about-chirps" class="level2">
 <h2 class="anchored" data-anchor-id="about-chirps">About CHIRPS</h2>
-<p>The Climate Hazards Group InfraRed Precipitation with Station data (CHIRPS) is a quasi-global rainfall dataset spanning 1981 to present. The rainfall data is available as daily, pentadaily (5-day), and monthly raster files at a resolution of 0.05°. This post covers how to obtain CHIRPS data using the PATHtools package for projects requiring areal data, e.g., summary data for health districts or regions. It also provides a brief introduction to the <a href="https://docs.ropensci.org/chirps/">chirps R package</a>, which downloads data at user-defined points, e.g., health facilities or households.</p>
+<p>The Climate Hazards Group InfraRed Precipitation with Station data (CHIRPS) is a quasi-global rainfall dataset spanning 1981 to present. The rainfall data is available as daily, pentadaily (5-day), and monthly raster files at a resolution of 0.05°. This post covers how to obtain CHIRPS data using the <code>PATHtools</code> package for projects requiring areal data, e.g., summary data for health districts or regions. It also provides a brief introduction to the <a href="https://docs.ropensci.org/chirps/"><code>chirps</code> R package</a>, which downloads data at user-defined points, e.g., health facilities or households.</p>
 <p>Learn more about CHIRPS at <a href="https://www.chc.ucsb.edu/data/chirps">UCSB’s Climate Hazards Center</a>.</p>
 </section>
 <section id="areal-data" class="level2">
 <h2 class="anchored" data-anchor-id="areal-data">Areal data</h2>
-<p>The PATHtools <em>rainfall()</em> function allows you to extract estimates of average rainfall across one or more areas saved as project shapefiles. First, install PATHtools.</p>
+<p>The <code>PATHtools</code> <code>rainfall()</code> function allows you to extract estimates of average rainfall across one or more areas saved as project shapefiles. First, install <code>PATHtools</code>.</p>
 <div class="cell">
 <div class="sourceCode cell-code" id="cb1"><pre class="sourceCode r code-with-copy"><code class="sourceCode r"><span id="cb1-1"><a href="#cb1-1" aria-hidden="true" tabindex="-1"></a><span class="fu">install.packages</span>(<span class="st">"devtools"</span>, <span class="at">repos =</span> <span class="st">"http://cran.us.r-project.org"</span>)</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
 <div class="cell-output cell-output-stdout">
 <pre><code>package 'devtools' successfully unpacked and MD5 sums checked
 
 The downloaded binary packages are in
-    C:\Users\eferriss\AppData\Local\Temp\RtmpI1Pb81\downloaded_packages</code></pre>
+    C:\Users\eferriss\AppData\Local\Temp\RtmpScGxNO\downloaded_packages</code></pre>
 </div>
 <div class="sourceCode cell-code" id="cb3"><pre class="sourceCode r code-with-copy"><code class="sourceCode r"><span id="cb3-1"><a href="#cb3-1" aria-hidden="true" tabindex="-1"></a>devtools<span class="sc">::</span><span class="fu">install_github</span>(<span class="st">"PATH-Global-Health/PATHtools"</span>)</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
 </div>
-<p>Next, read in a shapefile of Zambia’s provinces from the package and obtain daily rainfall estimates for each polygon (province). Note the arguments for the <em>daily_rainfall()</em> function: The <strong>start_date</strong> and <strong>end_date</strong> are the beginning and end boundaries of your time period, and must be supplied in “YYYY-MM-DD” format. The shapefile <strong>shp</strong> should be an <strong>sf</strong> object of the POLYGON or MULTIPOLYGON class.</p>
+<p>Next, read in a shapefile of Zambia’s provinces from the package and obtain daily rainfall estimates for each polygon (province). Note the arguments for the <code>daily_rainfall()</code> function: The <strong>start_date</strong> and <strong>end_date</strong> are the beginning and end boundaries of your time period, and must be supplied in “YYYY-MM-DD” format. The shapefile <strong>shp</strong> should be an <strong>sf</strong> object of the POLYGON or MULTIPOLYGON class.</p>
 <div class="cell">
 <div class="sourceCode cell-code" id="cb4"><pre class="sourceCode r code-with-copy"><code class="sourceCode r"><span id="cb4-1"><a href="#cb4-1" aria-hidden="true" tabindex="-1"></a><span class="fu">library</span>(PATHtools)</span>
 <span id="cb4-2"><a href="#cb4-2" aria-hidden="true" tabindex="-1"></a></span>
@@ -282,7 +282,7 @@ The downloaded binary packages are in
 #   ⁶​`chirps_2012-01-06`, ⁷​`chirps_2012-01-07`, ⁸​`chirps_2012-01-08`</code></pre>
 </div>
 </div>
-<p>The default data format from <strong>daily_rainfall</strong> is wide. To obtain the data in long format, set the argument <strong>long</strong> equal to TRUE.</p>
+<p>The default data format from <code>daily_rainfall()</code> is wide. To obtain the data in long format, set the argument <strong>long</strong> equal to TRUE.</p>
 <div class="cell">
 <div class="sourceCode cell-code" id="cb6"><pre class="sourceCode r code-with-copy"><code class="sourceCode r"><span id="cb6-1"><a href="#cb6-1" aria-hidden="true" tabindex="-1"></a><span class="co">#Obtain daily rainfall for 2012-01-01 through 2012-01-31 in LONG FORMAT</span></span>
 <span id="cb6-2"><a href="#cb6-2" aria-hidden="true" tabindex="-1"></a>rain_areal_long <span class="ot">&lt;-</span> <span class="fu">daily_rainfall</span>(<span class="fu">c</span>(start_date, end_date),shp, <span class="at">long =</span> <span class="cn">TRUE</span>)</span>
@@ -310,7 +310,7 @@ The downloaded binary packages are in
 <div class="cell-output-display">
 <div class="quarto-figure quarto-figure-center">
 <figure class="figure">
-<p><a href="index_files/figure-html/unnamed-chunk-4-1.png" class="lightbox" data-gallery="quarto-lightbox-gallery-1" width="672"><img src="index_files/figure-html/unnamed-chunk-4-1.png" class="img-fluid figure-img"></a></p>
+<p><a href="index_files/figure-html/unnamed-chunk-4-1.png" class="lightbox" width="672" data-gallery="quarto-lightbox-gallery-1"><img src="index_files/figure-html/unnamed-chunk-4-1.png" class="img-fluid figure-img"></a></p>
 </figure>
 </div>
 </div>
@@ -318,14 +318,14 @@ The downloaded binary packages are in
 </section>
 <section id="point-data" class="level2">
 <h2 class="anchored" data-anchor-id="point-data">Point data</h2>
-<p>To get estimated daily rainfall at specified locations, such as health facilities, we can use the chirps package. Here, we’ll create a data.frame of points and download their data.</p>
+<p>To get estimated daily rainfall at specified locations, such as health facilities, we can use the <code>chirps</code> package. Here, we’ll create a data.frame of points and download their data.</p>
 <div class="cell">
 <div class="sourceCode cell-code" id="cb9"><pre class="sourceCode r code-with-copy"><code class="sourceCode r"><span id="cb9-1"><a href="#cb9-1" aria-hidden="true" tabindex="-1"></a><span class="fu">install.packages</span>(<span class="st">"chirps"</span>, <span class="at">repos =</span> <span class="st">"http://cran.us.r-project.org"</span>)</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
 <div class="cell-output cell-output-stdout">
 <pre><code>package 'chirps' successfully unpacked and MD5 sums checked
 
 The downloaded binary packages are in
-    C:\Users\eferriss\AppData\Local\Temp\RtmpI1Pb81\downloaded_packages</code></pre>
+    C:\Users\eferriss\AppData\Local\Temp\RtmpScGxNO\downloaded_packages</code></pre>
 </div>
 <div class="sourceCode cell-code" id="cb11"><pre class="sourceCode r code-with-copy"><code class="sourceCode r"><span id="cb11-1"><a href="#cb11-1" aria-hidden="true" tabindex="-1"></a><span class="fu">library</span>(chirps)</span>
 <span id="cb11-2"><a href="#cb11-2" aria-hidden="true" tabindex="-1"></a></span>
@@ -713,7 +713,7 @@ window.document.addEventListener("DOMContentLoaded", function (event) {
 </code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
 </div></div></div></div></div>
 </div> <!-- /content -->
-<script>var lightboxQuarto = GLightbox({"descPosition":"bottom","loop":true,"openEffect":"zoom","selector":".lightbox","closeEffect":"zoom"});</script>
+<script>var lightboxQuarto = GLightbox({"selector":".lightbox","openEffect":"zoom","descPosition":"bottom","closeEffect":"zoom","loop":true});</script>
 
 
 
