@@ -1,0 +1,123 @@
+---
+title: "Downloading CHIRPS rainfall data"
+author: "Will Sheahan, Justin Millar, and Ellen Ferriss"
+date: "3/1/2023"
+categories: [rainfall, R, raster]
+image: "thumbnail.jpg"
+toc: true
+format:
+  html:
+    code-fold: false
+    code-tools: true
+execute:
+  warning: false
+  message: false
+---
+
+
+## About CHIRPS
+
+The Climate Hazards Group InfraRed Precipitation with Station data (CHIRPS) is a quasi-global rainfall dataset spanning 1981 to present. The rainfall data is available as daily, pentadaily (5-day), and monthly raster files at a resolution of 0.05°. This post covers how to obtain CHIRPS data using the `PATHtools` package for projects requiring areal data, e.g., summary data for health districts or regions. It also provides a brief introduction to the [`chirps` R package](https://docs.ropensci.org/chirps/), which downloads data at user-defined points, e.g., health facilities or households.
+
+Learn more about CHIRPS at [UCSB's Climate Hazards Center](https://www.chc.ucsb.edu/data/chirps).
+
+## Areal data
+
+The `PATHtools` `rainfall()` function allows you to extract estimates of average rainfall across one or more areas saved as project shapefiles. First, install `PATHtools`.
+
+
+```{r message=FALSE}
+install.packages("devtools", repos = "http://cran.us.r-project.org")
+devtools::install_github("PATH-Global-Health/PATHtools")
+```
+
+
+Next, read in a shapefile of Zambia's provinces from the package and obtain daily rainfall estimates for each polygon (province). Note the arguments for the `daily_rainfall()` function: The **start_date** and **end_date** are the beginning and end boundaries of your time period, and must be supplied in "YYYY-MM-DD" format. The shapefile **shp** should be an **sf** object of the POLYGON or MULTIPOLYGON class.
+
+
+```{r}
+library(PATHtools)
+
+#Load shapefile
+shp <- load_shapefile(country = "Zambia", admin_level = 1)
+
+#Obtain daily rainfall for 2012-01-01 through 2012-01-31 in WIDE FORMAT
+start_date <- "2012-01-01"
+end_date <- "2012-01-31"
+rain_areal <- daily_rainfall(c(start_date, end_date),shp)
+
+#View rainfall data for first 5 days
+rain_areal[,1:6]
+```
+
+
+The default data format from `daily_rainfall()` is wide. To obtain the data in long format, set the argument **long** equal to TRUE.
+
+
+```{r}
+#Obtain daily rainfall for 2012-01-01 through 2012-01-31 in LONG FORMAT
+rain_areal_long <- daily_rainfall(c(start_date, end_date),shp, long = TRUE)
+
+#View rainfall data for first 5 days in Central Province
+rain_areal_long[1:5,]
+```
+
+
+Finally, to obtain CHIRPS rasters, set the argument **output_raster** equal to TRUE.
+
+
+```{r}
+#Obtain daily rainfall rasters for 2012-01-01 through 2012-01-31
+rain_areal_raster <- daily_rainfall(c(start_date, end_date), shp, output_raster = TRUE)
+
+#Plot raster for January 1, 2012
+terra::plot(rain_areal_raster$`chirps_2012-01-01`)
+```
+
+
+## Point data
+
+To get estimated daily rainfall at specified locations, such as health facilities, we can use the `chirps` package. Here, we'll create a data.frame of points and download their data.
+
+
+```{r message=FALSE}
+install.packages("chirps", repos = "http://cran.us.r-project.org")
+library(chirps)
+
+#Create points object
+points <- data.frame(lon = c(28.287, 28.213, 28.637, 28.446), lat = c(-15.407, -12.802, -12.959, -14.447))
+
+#Obtain daily rainfall for 2012-01-01 through 2012-01-31
+start_date <- "2012-01-01"
+end_date <- "2012-01-31"
+rain_point <- get_chirps(points, c(start_date, end_date), server = "ClimateSERV")
+
+#View first few rows
+head(rain_point)
+```
+
+
+## Aggregating data from daily to monthly
+
+To get monthly data, we aggregate the above objects.
+
+
+```{r}
+library(tidyverse)
+library(lubridate)
+
+#Aggregate areal data to monthly totals
+rain_areal_long_monthly <- rain_areal_long %>%
+  group_by(ADM1, month = floor_date(date, "month")) %>%
+  summarise(rainfall = sum(rainfall))
+
+rain_areal_long_monthly
+
+#Aggregate point data to monthly totals
+rain_point_monthly <- rain_point %>%
+  group_by(lon, lat, month = floor_date(date, "month")) %>%
+  summarise(chirps = sum(chirps))
+
+rain_point_monthly
+```
+

@@ -1,7 +1,7 @@
 ---
 title: "Downloading CHIRPS rainfall data"
 author: "Will Sheahan, Justin Millar, and Ellen Ferriss"
-date: "1/27/2023"
+date: "3/1/2023"
 categories: [rainfall, R, raster]
 image: "thumbnail.jpg"
 toc: true
@@ -43,7 +43,7 @@ end_date <- "2012-01-31"
 rain_areal <- daily_rainfall(c(start_date, end_date),shp)
 
 #View rainfall data for first 5 days
-rain_areal[,1:9]
+rain_areal[,1:6]
 ```
 
 The default data format from `daily_rainfall()` is wide. To obtain the data in long format, set the argument **long** equal to TRUE.
